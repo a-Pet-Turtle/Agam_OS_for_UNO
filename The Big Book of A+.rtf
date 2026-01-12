@@ -1,0 +1,177 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 LucidaGrande;\f2\froman\fcharset0 TimesNewRomanPS-ItalicMT;
+\f3\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;\red251\green2\blue7;\red0\green0\blue0;\red230\green230\blue230;
+\red0\green0\blue0;\red251\green2\blue7;\red230\green230\blue230;\red0\green0\blue0;\red230\green230\blue230;
+}
+{\*\expandedcolortbl;;\cssrgb\c100000\c14913\c0;\cssrgb\c0\c0\c0;\csgray\c92143;
+\csgray\c0\c0;\cssrgb\c100000\c14913\c0;\csgray\c92143;\cssrgb\c0\c1\c1;\cssrgb\c92245\c92245\c92129;
+}
+\margl1440\margr1440\vieww25400\viewh13060\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\f0\fs72 \cf0 The Big Book of 
+\f1\fs128 \cf2 A
+\fs160 +
+\f0\fs48 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\f2\i\fs22 \cf3 The \'93Simple\'94 Language\
+
+\f0\i0 By a_Pet_Turtle of StarShot Studios
+\fs48 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs28 \cf3 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\sl264\slmult1\pardirnatural\partightenfactor0
+\cf3 A+ is a programming language first used by Ag@m OS for UNO as an executable file format. A+ is saved as an 
+\f1 \cb4 *.axa\cb1  
+\f0 (A Plus Assembly) file. It is in a plain text format, and interpreted and compiled within the processor of the Arduino. Most of the examples you will se in the manual are designed for Ag@m OS for UNO, but can be used elsewhere.\
+\
+
+\fs48 The Basics\
+
+\fs28 A+ at times can feel really complicated, but makes complete sense once one learns to understand it. Below is possibly the simplest command.\
+
+\f1 \cf2 \cb4 put
+\f0 \cf3 \cb1 \
+The command put outputs whatever is stored to local storage. To send something to local storage, you use the store command. The store command uses the following syntax:\
+
+\f1 \cf2 \cb4 store\cf3  <value>
+\f0 \cb1 \
+The store command is one of few that take an argument. Almost all commands in A+ use data stored in local storage. The next command is the load command.\
+
+\f1 \cf2 \cb4 load\cf3  <variable>
+\f0 \cb1 \
+On Ag@m OS for UNO, there are only 26 available variables. Each variable can only store an integer. In an interpreter that is not Ag@m OS\'92s A+ Executer, variables can store strings like this:\
+
+\f1 \cf2 \cb4 store\cf3  Ima lukewarm bean
+\f0 \cb1 \
+If it can be converted to a string, it will be converted to a string. To convert it, use any of the following commands:\
+
+\f1 \cf2 \cb4 Integer\cb5 \
+\cb4 String\cb5 \
+\cb4 Float
+\f0 \cf3 \cb1 \
+The Integer command tries to convert the value in local storage to an integer. The String command tries to convert the value in local storage to a string. The Float command tries to convert the value in local storage to a float.\
+If you want to save your changes to the loaded variable, you use the save function.\
+
+\f1 \cf2 \cb4 save
+\f0 \cf3 \cb5 \
+This saves the value in local storage to the loaded variable.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\sl264\slmult1\pardirnatural\partightenfactor0
+
+\f1 \cf6 \cb7 delay
+\f0 \cf3 \cb5 \
+\cf3 \cb1 The delay command delays for the amount of milliseconds in local storage.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\sl264\slmult1\pardirnatural\partightenfactor0
+\cf3 \
+
+\fs48 Math\
+
+\fs28 The most basic math there is in this language is the increase and decrease functions. Better represented by:\
+
+\f1 \cf2 \cb4 inc\cb5 \
+\cb4 dec
+\f0 \cf3 \cb5 \
+As you might be able to guess, the inc command increases the data in local storage by one, and dec decreases it by one.\
+For better addition and subtraction, use the add and sub commands.\
+
+\f1 \cf6 \cb7 add \cf3 <var>\cf6 \cb5 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\sl264\slmult1\pardirnatural\partightenfactor0
+\cf6 \cb7 sub \cf3 <var>
+\f0 \cb5 \
+The add function adds the value of the given variable to local storage, and the sub function subtracts the value of the given variable from local storage.\
+The next ones are the mlt and the div commands.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\sl264\slmult1\pardirnatural\partightenfactor0
+
+\f1 \cf6 \cb7 mlt \cf3 <var>\cf6 \cb5 \
+\cb7 div \cf3 <var>
+\f0 \cb5 \
+The mlt command multiplies the value of local storage by the value of the given variable, and the div command divides the value of local storage by the value of the given variable.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\sl264\slmult1\pardirnatural\partightenfactor0
+
+\fs48 \cf3 Logic\
+
+\fs28 Logic statements in A+ are really similar to those of other languages, but use the value in local storage rather than a logic equation (var1==var2). Rather than using boolean values, A+ uses 0s and 1s. True = 1. False = 0.\
+
+\f1 \cf2 \cb4 if\cb5 \
+\cb4 nif\cb5 \
+\cb4 #if \cf3 <value>\cf2 \cb5 \
+\cb4 #nif \cf3 <value>\cf2 \cb5 \
+\cb4 gt \cf3 <var>\cf2 \cb5 \
+\cb4 lt \cf3 <var>
+\f0 \cf3 \cb5 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\sl264\slmult1\pardirnatural\partightenfactor0
+
+\f1 \cf6 \cb7 is \cf3 <var>
+\f0 \cb5 \
+
+\f1 \cf6 \cb7 nis \cf3 <var>
+\f0 \cb5 \
+These logic statements skip the next line depending on the condition.\
+The if statement skips the next line of code if the value stored to local storage is equal to 0. It executes the next line otherwise.\
+The nif statement is the opposite of the if statement. The difference: executes the next line only if the value of local storage is equal to 0.\
+The #if and #nif statements are almost the same as the normal if and nif statements, but the value you give them replaces the 0 in the normal if/nif statements. Rather than only execution if the number is not 0, it only executes if the number is the same as the one given.\
+The gt and lt statements are the greater than and less than statements. The gt statement proceeds only if the value of the given variable is larger than the value stored to local storage. The lt statement proceeds only if the value of the given variable is smaller than the value stored to local storage. \
+The is statement only executes the next line if the value stored to local storage is equal to the value of the given variable.\
+The nis statement only executes the next line if the value stored to local storage is not equal to the value of the given variable.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\sl264\slmult1\pardirnatural\partightenfactor0
+
+\fs48 \cf3 Interaction With the Hardware\
+
+\f3\b\fs24 \cf2 WARNING: THE INFORMATION IN THIS SECTION IS ONLY COMPATIBLE WITH AG@M OS FOR UNO
+\f0\b0\fs28 \cf3 \
+
+\fs36 Inputs
+\fs28 \
+The A+ language can interact with your computer in a number of ways. Possibly the simplest is reading inputs.\
+To read whether a button is pressed or not, use the following commands:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\sl264\slmult1\pardirnatural\partightenfactor0
+
+\f1 \cf6 \cb7 loadbut1
+\f0 \cf3 \cb5 \
+
+\f1 \cf6 \cb7 loadbut2
+\f0 \cf3 \cb5 \
+
+\f1 \cf6 \cb7 loadbut3
+\f0 \cf3 \cb5 \
+These commands set the value of local storage to 0 or 1 depending on whether or not the button is pressed.\
+To read the ambient light sensor or the temperature sensor, use the following commands:\
+
+\f1 \cf6 \cb7 loadlight
+\f0 \cf3 \cb5 \
+
+\f1 \cf6 \cb7 loadtemp
+\f0 \cf3 \cb5 \
+These commands return analog data. Analog data is not just 0s or 1s, or ons or offs. Analog data is a value, like 256.\
+You can also tell the time since the computer was first turned on using the loadontime command.\
+
+\f1 \cf6 \cb7 loadruntime
+\f0 \cf3 \cb5 \
+The loadontime command takes the time since the computer was turned on, and stores the value to local storage.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\sl264\slmult1\pardirnatural\partightenfactor0
+
+\fs36 \cf3 Outputs\
+
+\fs28 Now that you can read and process data, let\'92s actually do something with it.\
+To make a tone on the speaker (piezo), use the tone command.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\sl264\slmult1\pardirnatural\partightenfactor0
+
+\f1 \cf6 \cb7 tone \cf8 \cb9 <duration>
+\f0 \cf3 \cb5 \
+The tone command takes the value of the tone in hertz from local storage, and plays it for the given duration in milliseconds.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\sl264\slmult1\pardirnatural\partightenfactor0
+
+\fs36 \cf3 The LCD Display\
+
+\fs28 The LCD display is the most used form of output on the LCD version of the Ag@mputer. Here are the commands to manipulate it:\
+Lcdclear\
+Lcdrcur\
+Put\
+Sectorhigh\
+Setcurlow\
+}
